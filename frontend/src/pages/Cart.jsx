@@ -18,7 +18,7 @@ const Cart = () => {
 
   const fetchCartData = async () => {
     try {
-      const response = await axios.get(`${window.location.origin}/api/v1/get-user-cart`, { headers });
+      const response = await axios.get(`https://try-web-pbcm.onrender.com`, { headers });
       setCart(response.data.data || []);
       calculateTotal(response.data.data || []);
     } catch (error) {
@@ -40,7 +40,7 @@ const Cart = () => {
 
   const deleteItem = async (bookid) => {
     try {
-      const response = await axios.put(`${window.location.origin}/api/v1/remove-from-cart/${bookid}`, null, { headers });
+      const response = await axios.put(`https://try-web-pbcm.onrender.com`, null, { headers });
       alert(response.data.message);
       await fetchCartData();
     } catch (error) {
@@ -51,7 +51,7 @@ const Cart = () => {
 
   const handlePlaceOrder = async () => {
     try {
-      const response = await axios.post(`${window.location.origin}/api/v1/place-order`, { order: cart }, { headers });
+      const response = await axios.post(`https://try-web-pbcm.onrender.com`, { order: cart }, { headers });
       alert(response.data.message);
       navigate("/profile/orderHistory");
     } catch (error) {

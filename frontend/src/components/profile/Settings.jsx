@@ -18,7 +18,7 @@ const change = (e)=>{
     const fetch = async () => {
       try {
         const response = await axios.get(
-          "${window.location.origin}/api/v1/get-user-information",
+          "https://try-web-pbcm.onrender.com",
           { headers }
         );
         setProfileData(response.data);
@@ -31,7 +31,7 @@ const change = (e)=>{
   }, []);
 
   const handleUpdate = async() => {
-  const response = await axios.put(`${window.location.origin}/api/v1/update-address`,Value,
+  const response = await axios.put(`https://try-web-pbcm.onrender.com`,Value,
     {headers}
   );
   alert(response.data.message);

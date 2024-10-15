@@ -30,7 +30,7 @@ const SignUp = () => {
       alert("All fields are required");
     } else {
       try {
-        const response = await axios.post(`${window.location.origin}/api/v1/sign-up`, Values, {
+        const response = await axios.post(`https://try-web-pbcm.onrender.com`, Values, {
           headers: {
             'Content-Type': 'application/json',
           },

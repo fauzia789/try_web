@@ -14,7 +14,7 @@ const Favourites = () => {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          `${window.location.origin}/api/v1/get-favourite-books`,
+          `https://try-web-pbcm.onrender.com`,
           { headers }
         );
         setFavouriteBooks(response.data.data || []);

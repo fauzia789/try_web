@@ -40,7 +40,7 @@ const AddBook = () => {
         alert("All fields are required");
       } else {
         const response = await axios.post(
-          `${window.location.origin}/api/v1/add-book`,
+          `https://try-web-pbcm.onrender.com`,
           Data,
           { headers }
         );

@@ -13,7 +13,7 @@ const UserOrderHistore = () => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const response = await axios.get(`${window.location.origin}/api/v1/order-history`, { headers });
+        const response = await axios.get(`https://try-web-pbcm.onrender.com`, { headers });
         setOrderHistory(response.data.data);
       } catch (error) {
         console.error("Error fetching order history:", error);

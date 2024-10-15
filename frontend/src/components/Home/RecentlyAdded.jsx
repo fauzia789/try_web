@@ -8,7 +8,7 @@ const RecentlyAdded = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const response = await axios.get(`${window.location.origin}/get-recently-added-books`);
+      const response = await axios.get(`https://try-web-pbcm.onrender.com`);
       setData(response.data.data);
     };
     fetch();

@@ -10,7 +10,7 @@ const BookCard = ({ data, favourite }) => {
    };
    const handleRemoveBook = async()=>{
     const response =await axios.put(
-      `${window.location.origin}/api/v1/remove-book-favourite`,
+      `https://try-web-pbcm.onrender.com`,
       {},{headers}
     );
     alert(response.data.message);

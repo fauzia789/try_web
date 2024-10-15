@@ -17,7 +17,7 @@ const Profile = () => {
     const fetchProfileData = async () => {
       try {
         const response = await axios.get(
-          `${window.location.origin}/api/v1/get-user-information`,
+          `https://try-web-pbcm.onrender.com`,
           { headers }
         );
         setProfile(response.data);

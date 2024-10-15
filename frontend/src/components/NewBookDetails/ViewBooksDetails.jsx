@@ -21,7 +21,7 @@ const ViewBooksDetails = () => {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          `${window.location.origin}/api/v1/get-book-by-id/${id}`
+          `https://try-web-pbcm.onrender.com`
         );
         setData(response.data.data);
       } catch (error) {
@@ -40,13 +40,13 @@ const ViewBooksDetails = () => {
    };
 const handleFavourite = async () =>{
   const response = await axios
-  .put(`${window.location.origin}/api/v1/add-book-favourite`, {}, {headers}
+  .put(`https://try-web-pbcm.onrender.com`, {}, {headers}
 
   );
   alert(response.data.message);
 }
 const handleCart = async () =>{
-  const response = await axios.put(`${window.location.origin}/api/v1/add-to-cart` , {},
+  const response = await axios.put(`https://try-web-pbcm.onrender.com` , {},
      {headers} );
      alert(response.data.message);
 }
@@ -55,7 +55,7 @@ const handleCart = async () =>{
     return <Loader />;
   }
 const handleDelete= async() =>{
-  const response=await axios.delete(`${window.location.origin}:1000/api/v1/delete-book`,
+  const response=await axios.delete(`https://try-web-pbcm.onrender.com`,
     {headers}
   );
   alert(response.data.message);

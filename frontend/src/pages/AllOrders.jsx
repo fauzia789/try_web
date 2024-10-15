@@ -19,7 +19,7 @@ const AllOrders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get(`${window.location.origin}/api/v1/all-orders`, { headers });
+        const response = await axios.get(`https://try-web-pbcm.onrender.com`, { headers });
         setAllOrders(response.data.data);
       } catch (error) {
         console.error("Error fetching orders", error);

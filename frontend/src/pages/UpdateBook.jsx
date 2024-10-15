@@ -45,7 +45,7 @@ const UpdateBook = () => {
         alert("All fields are required");
       } else {
         const response = await axios.put(
-          `${window.location.origin}/api/v1/update-book`,
+          `https://try-web-pbcm.onrender.com`,
           Data,
           { headers }
         );
@@ -62,7 +62,7 @@ const UpdateBook = () => {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          `${window.location.origin}/api/v1/get-book-by-id/${id}`
+          `https://try-web-pbcm.onrender.com`
         );
         setData(response.data.data);
       } catch (error) {

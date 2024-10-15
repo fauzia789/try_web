@@ -8,7 +8,7 @@ const AllBooks = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const response = await axios.get(`${window.location.origin}/api/v1/get-all-books`);
+      const response = await axios.get(`https://try-web-pbcm.onrender.com`);
       setData(response.data.data);
     };
     fetch();
