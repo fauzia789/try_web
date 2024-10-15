@@ -17,8 +17,6 @@ app.use(express.json());
 // Serve static files from the 'frontend/src/images' directory
 app.use('/static', express.static(path.join(__dirname, '../frontend/src/images')));
 
-// Serve static files from the frontend's build folder
-app.use(express.static(path.resolve(__dirname, "frontend", "build")));
 
 // Routes
 app.use("/api/v1", user);
